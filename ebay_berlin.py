@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!~/opt/miniconda3/bin/python
 
 from requests_html import HTMLSession
 import sqlite3
