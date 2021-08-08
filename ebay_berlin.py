@@ -21,7 +21,7 @@ def db_init_tbl_ebay(db_name, tbl_name):
                             LISTING_COUNT INTEGER)''') 
     db_conn.commit()
     db_conn.close()
-    logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
+    # logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
 
 def db_insert_ebay(db_name,tbl_name, data_list):
     db_conn = sqlite3.connect(db_name)
