@@ -1,6 +1,6 @@
 #!/bin/sh
 PATH=/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin
-/usr/bin/python /Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/ebay_berlin.py
+~/opt/miniconda3/bin/python /Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/ebay_berlin.py
 python -m papermill eBay_Overview.ipynb eBay_Overview.ipynb
 git add .
 git commit -m "Cron Commit"

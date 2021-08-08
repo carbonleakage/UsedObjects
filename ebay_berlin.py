@@ -15,7 +15,7 @@ def db_init_tbl_ebay(db_name, tbl_name):
     db_conn = sqlite3.connect(db_name)
     cur = db_conn.cursor()
 
-    cur.execute("CREATE TABLE IF NOT EXISTS " + tbl_name + " RECORD_TIME STRING, PRODUCT STRING,LISTING_COUNT INTEGER);") 
+    cur.execute("CREATE TABLE IF NOT EXISTS " + tbl_name + " (RECORD_TIME STRING, PRODUCT STRING,LISTING_COUNT INTEGER);") 
     db_conn.commit()
     db_conn.close()
     # logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
@@ -29,7 +29,7 @@ def db_insert_ebay(db_name,tbl_name, data_list):
 
     db_conn.commit()
     db_conn.close()
-    logging.info(str(dt.datetime.now()) + "INFO: Inserted " + len(data_list) + " rows into"+ tbl_name + " table!")
+    logging.info(str(dt.datetime.now()) + "INFO: Inserted " + str(len(data_list)) + " rows into"+ tbl_name + " table!")
 
 if __name__ == "__main__":
     db = "/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/UsedObjects.db"
