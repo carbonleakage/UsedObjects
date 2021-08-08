@@ -27,7 +27,7 @@ def db_insert_ebay(db_name,tbl_name, data_list):
 
     db_conn.commit()
     db_conn.close()
-    logging.info(f"{dt.datetime.now()} INFO: Inserted {len(data_list)} rows into {tbl_name} table!")
+    logging.info(str(dt.datetime.now()) + "INFO: Inserted " + len(data_list) + " rows into"+ tbl_name + " table!")
 
 if __name__ == "__main__":
     db = "/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/UsedObjects.db"
