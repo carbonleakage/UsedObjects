@@ -13,7 +13,7 @@ def db_init_tbl_ebay(db_name, tbl_name):
     db_conn = sqlite3.connect(db_name)
     cur = db_conn.cursor()
 
-    cur.execute(f'''CREATE TABLE IF NOT EXISTS {tbl_name} (RECORD_TIME STRING, PRODUCT STRING,LISTING_COUNT INTEGER);''') 
+    cur.execute("CREATE TABLE IF NOT EXISTS " + "tbl_name" + " RECORD_TIME STRING, PRODUCT STRING,LISTING_COUNT INTEGER);") 
     db_conn.commit()
     db_conn.close()
     # logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
