@@ -8,7 +8,7 @@ import os
 os.chdir("/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/")
 
 logging.basicConfig(filename = '/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/UsedObjectsLog.log',level=logging.DEBUG)
-logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
+# logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
 start_time = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
 
 def db_init_tbl_ebay(db_name, tbl_name):
