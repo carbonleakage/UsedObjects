@@ -7,7 +7,7 @@ import datetime as dt
 import os
 os.chdir("/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/")
 
-logging.basicConfig(filename = 'UsedObjectsLog.log',level=logging.DEBUG)
+logging.basicConfig(filename = '/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/UsedObjectsLog.log',level=logging.DEBUG)
 logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
 start_time = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
 
