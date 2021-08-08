@@ -2,6 +2,8 @@ from requests_html import HTMLSession
 import sqlite3
 import logging
 import datetime as dt
+import os
+os.chdir("/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/")
 
 logging.basicConfig(filename = 'UsedObjectsLog.log',level=logging.DEBUG)
 logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
