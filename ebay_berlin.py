@@ -33,7 +33,7 @@ def db_insert_ebay(db_name,tbl_name, data_list):
     logging.info(f"{dt.datetime.now()} INFO: Inserted {len(data_list)} rows into {tbl_name} table!")
 
 
-db = "UsedObjects.db"
+db = "/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/UsedObjects.db"
 tbl_name = "EBAY_TOP_BERLIN"
 db_init_tbl_ebay(db, tbl_name)
 
