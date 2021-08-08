@@ -16,7 +16,7 @@ def db_init_tbl_ebay(db_name, tbl_name):
     cur.execute(f'''CREATE TABLE IF NOT EXISTS {tbl_name} ( 
                             RECORD_TIME STRING, 
                             PRODUCT STRING,
-                            LISTING_COUNT INTEGER)''') 
+                            LISTING_COUNT INTEGER);''') 
     db_conn.commit()
     db_conn.close()
     # logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
