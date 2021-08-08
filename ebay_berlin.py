@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from requests_html import HTMLSession
 import sqlite3
 import logging
