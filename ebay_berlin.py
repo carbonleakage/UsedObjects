@@ -15,7 +15,7 @@ def db_init_tbl_ebay(db_name, tbl_name):
     db_conn = sqlite3.connect(db_name)
     cur = db_conn.cursor()
 
-    cur.execute("CREATE TABLE IF NOT EXISTS " + tbl_name + " (RECORD_TIME STRING, PRODUCT STRING,LISTING_COUNT INTEGER);") 
+    cur.execute("CREATE TABLE IF NOT EXISTS " + tbl_name + " (RECORD_TIME STRING, PRODUCT STRING, LISTING_COUNT INTEGER, PRODUCT_HEADER INTEGER);") 
     db_conn.commit()
     db_conn.close()
     # logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
@@ -24,8 +24,12 @@ def db_insert_ebay(db_name,tbl_name, data_list):
     db_conn = sqlite3.connect(db_name)
     cur = db_conn.cursor()
 
-    for row in data_list:
-        cur.execute("INSERT INTO " + tbl_name + " VALUES (?,?,?)", (start_time, row[0], row[1]))
+    for idx, row in enumerate(data_list):
+        if idx == 0:
+            cur.execute("INSERT INTO " + tbl_name + " VALUES (?,?,?,?)", (start_time, row[0], row[1],1))
+        else:
+            cur.execute("INSERT INTO " + tbl_name + " VALUES (?,?,?,?)", (start_time, row[0], row[1],0))
+
 
     db_conn.commit()
     db_conn.close()
