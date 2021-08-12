@@ -1,6 +1,7 @@
-cd Python_Projects/UsedObjects/
-source usedobjenv/bin/activate
-python ebay_berlin.py
+#!/bin/sh
+cd ~/Python_Projects/UsedObjects/
+#source usedobjenv/bin/activate
+./ebay_berlin.py
 papermill eBay_Overview.ipynb eBay_Overview.ipynb
 #git add .
 #git commit -m "Cron Commit"
