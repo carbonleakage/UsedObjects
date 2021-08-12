@@ -5,9 +5,9 @@ import sqlite3
 import logging
 import datetime as dt
 import os
-os.chdir("/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/")
+#os.chdir("/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/")
 
-logging.basicConfig(filename = '/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/UsedObjectsLog.log',level=logging.DEBUG)
+logging.basicConfig(filename = 'UsedObjectsLog.log',level=logging.DEBUG)
 # logging.info(f"{dt.datetime.now()} INFO: Started Running eBay script!")
 start_time = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -36,7 +36,7 @@ def db_insert_ebay(db_name,tbl_name, data_list):
     logging.info(str(dt.datetime.now()) + "INFO: Inserted " + str(len(data_list)) + " rows into"+ tbl_name + " table!")
 
 if __name__ == "__main__":
-    db = "/Users/saravananshanmugam/Carbonleakage_Git/UsedObjects/UsedObjects.db"
+    db = "UsedObjects.db"
     tbl_name = "EBAY_TOP_BERLIN"
     db_init_tbl_ebay(db, tbl_name)
 
